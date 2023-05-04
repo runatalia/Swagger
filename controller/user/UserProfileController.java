@@ -66,7 +66,7 @@ public class UserProfileController {
     }
 
     @Operation(summary = "Create user profile", description = "Create only profile based keycloak." +
-            "Swagger uses a json file for testing(file.json). In postman we do the usual json upload")
+            "Swagger uses a json file for testing(file.json). In postman we do the usual json upload")  //upload two file: file.json and MultipartFile 
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Profile was created",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE)}),
@@ -91,7 +91,7 @@ public class UserProfileController {
             @ApiResponse(responseCode = "500", description = "Server Error",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE)})
     })
-    @PutMapping(value = "/{id}",consumes = {"multipart/form-data"})
+    @PutMapping(value = "/{id}",consumes = {"multipart/form-data"}) //upload file and string: string convert to JSON and MultipartFile 
     @ResponseStatus(HttpStatus.OK)
     public UserProfileResponseDto updateUserById(@PathVariable Long id,
                                                @Parameter(name = "str", required = true, schema = @Schema(implementation = UserProfileRequestDto.class)) @RequestPart String str,
