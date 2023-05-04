@@ -10,7 +10,8 @@ add to pom:
     
 
 - remove CORS from browser:
-Login to command line as administrator
+Login to command line like administrator
+
 input:   cd C:\Program Files\Google\Chrome\Application
 input:   chrome.exe  --disable-site-isolation-trials --disable-web-security --user-data-dir="PATH_TO_PROJECT_DIRECTORY"
 
