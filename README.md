@@ -4,7 +4,7 @@ Login to command line as administrator
 input:   cd C:\Program Files\Google\Chrome\Application
 input:   chrome.exe  --disable-site-isolation-trials --disable-web-security --user-data-dir="PATH_TO_PROJECT_DIRECTORY"
 
-Work with Swagger from Spring Boot:
+Work with Swagger from Spring Boot(examples is in https://github.com/runatalia/Swagger/blob/main/controller/user/UserProfileController.java):
 
 - MultipartFile file with JSON (get String and convert to JSON):
 
@@ -17,6 +17,7 @@ Work with Swagger from Spring Boot:
             @ApiResponse(responseCode = "500", description = "Server Error",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE)})
     })
+    
     @PutMapping(value = "/{id}",consumes = {"multipart/form-data"})
     @ResponseStatus(HttpStatus.OK)
     public UserProfileResponseDto updateUserById(@PathVariable Long id,
@@ -50,8 +51,7 @@ Work with Swagger from Spring Boot:
         userProfileService.createUserProfile(userProfileRequestDto, file);
     }
     
-    ![image](https://user-images.githubusercontent.com/48579306/236305736-4899fbec-f391-4632-ba11-aebc3af1da37.png)
-
+   
 
 
 
