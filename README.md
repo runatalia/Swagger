@@ -1,4 +1,14 @@
 # Swagger
+add in pom:
+<code>
+     <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+</code>
+    
+
 - remove CORS from browser:
 Login to command line as administrator
 input:   cd C:\Program Files\Google\Chrome\Application
