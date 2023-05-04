@@ -43,6 +43,7 @@ Work with Swagger from Spring Boot(examples is in https://github.com/runatalia/S
             @ApiResponse(responseCode = "500", description = "Server Error",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE)})
     })
+    
     @PostMapping(value = "/create", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     @ResponseStatus(HttpStatus.OK)
     public void createProfile(@RequestPart  @Parameter(schema =@Schema(type = "string", format = "binary"))
@@ -52,6 +53,7 @@ Work with Swagger from Spring Boot(examples is in https://github.com/runatalia/S
     }
     
    
+![image](https://user-images.githubusercontent.com/48579306/236308506-6e53a66f-95c3-4654-9aff-16fc5b711388.png)
 
 
 
