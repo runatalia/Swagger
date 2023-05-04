@@ -1,5 +1,5 @@
 # Swagger
-add in pom:
+add to pom:
 <code>
      <dependency>
             <groupId>org.springdoc</groupId>
